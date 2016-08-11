@@ -86,7 +86,7 @@ public class Grafika extends JFrame implements ChangeListener
 						int tmpx = lokalizacjaKursora()[0];
 						int tmpy = lokalizacjaKursora()[1];
 
-						if (tmpx >= xp && tmpx <= xk && tmpy >= yp && tmpy <= yk)
+						if (tmpx >= xp && tmpx <= xk && tmpy >= yp-2 && tmpy <= yk) //powiekszenie aktywnego obszaru do gory
 						{
 							robot.mousePress(InputEvent.BUTTON1_MASK);
 							robot.mouseRelease(InputEvent.BUTTON1_MASK);
@@ -321,7 +321,7 @@ public class Grafika extends JFrame implements ChangeListener
 		JPanel zz = new JPanel();
 		zz.setLayout(null);
 		
-		suwakCzRekrutacji = new JSlider(SwingConstants.HORIZONTAL, 30, 150, 30);
+		suwakCzRekrutacji = new JSlider(SwingConstants.HORIZONTAL, 15, 120, 30);
 		suwakCzRekrutacji.addChangeListener(this);
 		suwakCzRekrutacji.setBounds(1, 1, 119, 19);
 		suwakCzRekrutacji.setMajorTickSpacing(15);
